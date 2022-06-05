@@ -3,14 +3,10 @@
 #include <stdio.h>
 #include "distancingInfo.h"
 
-void phase1();
-void phase2();
-void phase3();
-void phase4();
+void phase();
 
 void distancingInfo() {
     int choice; // 메뉴 번호
-    void (*pf[4])() = {phase1, phase2, phase3, phase4}; // 함수 포인터 배열 사용
 
     while(1) {
         printf("2020년 2월 29일부터 2021년 10월 31일까지 시행된 사회적 거리두기 정보입니다.\n\n");
@@ -26,14 +22,23 @@ void distancingInfo() {
         if(choice > 4 || choice <= 0)
             break;
 
-        pf[choice-1](); // 메뉴 번호가 1부터 시작하기 때문에 인덱스를 맞추기 위해서 choice - 1
+        phase(choice);
     }
 
 }
 
-void phase1() {
+void phase(choice) {
     FILE *fp = NULL; // 파일 포인터 선언
-    fp = fopen("phase1.txt", "r"); // 1단계 정보 입력된 파일 열기
+
+    // 메뉴 별로 여는 파일 다르게 설정
+    if (choice == 1)
+        fp = fopen("phase1.txt", "r");
+    else if (choice == 2)
+        fp = fopen("phase2.txt", "r");
+    else if (choice == 3)
+        fp = fopen("phase3.txt", "r");
+    else
+        fp = fopen("phase4.txt", "r");
 
     while (1) {
         char buffer[300]; // 문자열 출력을 위한 임시 배열
@@ -45,44 +50,4 @@ void phase1() {
     fclose(fp);
 }
 
-void phase2() {
-    FILE *fp = NULL; // 파일 포인터 선언
-    fp = fopen("phase2.txt", "r"); // 2단계 정보 입력된 파일 열기
 
-    while (1) {
-        char buffer[300];
-        char *pStr = fgets(buffer, 300, fp);
-        if (pStr == NULL)
-            break;
-        printf("%s\n", buffer);
-    }
-    fclose(fp);
-}
-
-void phase3() {
-    FILE *fp = NULL; // 파일 포인터 선언
-    fp = fopen("phase3.txt", "r"); // 3단계 정보 입력된 파일 열기
-
-    while (1) {
-        char buffer[300];
-        char *pStr = fgets(buffer, 300, fp);
-        if (pStr == NULL)
-            break;
-        printf("%s\n", buffer);
-    }
-    fclose(fp);
-}
-
-void phase4() {
-    FILE *fp = NULL; // 파일 포인터 선언
-    fp = fopen("phase4.txt", "r"); // 4단계 정보 입력된 파일 열기
-
-    while (1) {
-        char buffer[300];
-        char *pStr = fgets(buffer, 300, fp);
-        if (pStr == NULL)
-            break;
-        printf("%s\n", buffer);
-    }
-    fclose(fp);
-}

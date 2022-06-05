@@ -80,3 +80,9 @@
 0	31	1654345536574019217	CMakeFiles/CProgrammingAssignment.dir/vacInform.c.o	3df1ac387e147a13
 0	32	1654345536575419801	CMakeFiles/CProgrammingAssignment.dir/distancingInfo.c.o	3becbfbffbc13e92
 32	71	1654345536615335687	CProgrammingAssignment	d9e277553c4dd448
+0	1983	1654405670925060080	CMakeFiles/CProgrammingAssignment.dir/confirmedCase.c.o	11ec2bbed254d4a2
+1	1984	1654405670924886082	CMakeFiles/CProgrammingAssignment.dir/vacInform.c.o	3df1ac387e147a13
+1	1984	1654405670925145454	CMakeFiles/CProgrammingAssignment.dir/distancingInfo.c.o	3becbfbffbc13e92
+1984	2168	1654405671111913316	CProgrammingAssignment	d9e277553c4dd448
+0	30	1654405717641967659	CMakeFiles/CProgrammingAssignment.dir/distancingInfo.c.o	3becbfbffbc13e92
+30	71	1654405717683422703	CProgrammingAssignment	d9e277553c4dd448
