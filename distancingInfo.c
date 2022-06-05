@@ -8,7 +8,7 @@ void phase();
 void distancingInfo() {
     int choice; // 메뉴 번호
 
-    while(1) {
+    while (1) {
         printf("2020년 2월 29일부터 2021년 10월 31일까지 시행된 사회적 거리두기 정보입니다.\n\n");
 
         printf("1단계 (지속적 억제상태 유지)\n");
@@ -19,7 +19,7 @@ void distancingInfo() {
         printf("정보가 궁금하신 단계를 입력해주세요: ");
         scanf("%d", &choice);
 
-        if(choice > 4 || choice <= 0)
+        if (choice > 4 || choice <= 0)
             break;
 
         phase(&choice);

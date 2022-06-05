@@ -17,15 +17,15 @@ void vacInform() {
     VAC moderna = {"mRNA", "모더나코비드-19백신주", 18, 2};
     VAC janssen = {"바이러스 벡터 백신", "코비드19백신얀센주", 18, 1};
 
-    while(1){
+    while (1) {
         printf("1. 화이자, 2. 모더나, 3. 얀센 0. 이전\n");
         printf("정보가 궁금한 백신의 번호를 입력해주세요: ");
         scanf("%d", &choice);
 
-        if(choice > 3 || choice <= 0)
+        if (choice > 3 || choice <= 0)
             break;
 
-        switch(choice){
+        switch (choice) {
             case 1:
                 printf("\n**************************\n");
                 printf("플랫폼: %s\n", pfizer.platform);
