@@ -22,20 +22,20 @@ void distancingInfo() {
         if(choice > 4 || choice <= 0)
             break;
 
-        phase(choice);
+        phase(&choice);
     }
 
 }
 
-void phase(choice) {
+void phase(int *choice) {
     FILE *fp = NULL; // 파일 포인터 선언
 
     // 메뉴 별로 여는 파일 다르게 설정
-    if (choice == 1)
+    if (*choice == 1)
         fp = fopen("phase1.txt", "r");
-    else if (choice == 2)
+    else if (*choice == 2)
         fp = fopen("phase2.txt", "r");
-    else if (choice == 3)
+    else if (*choice == 3)
         fp = fopen("phase3.txt", "r");
     else
         fp = fopen("phase4.txt", "r");
